@@ -110,11 +110,11 @@ latex <- function(..., width, titlecaps = TRUE, short.fignames=FALSE, fig.path,
             }
             
             # call the default knitr hook as defined in render_latex()
-            paste0('\\end{kframe}',
+            paste0('\\begin{kframe}',
                    adjustwidth1,
                    hook_plot_tex(x, options),
                    adjustwidth2,
-                   '\\begin{kframe}')
+                   '\\end{kframe}')
           },
           
           ## remove figure margins with pdfcrop
